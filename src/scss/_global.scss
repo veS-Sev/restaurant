@@ -12,6 +12,9 @@ html,
 body {
   height: 100%;
   position: relative;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-family: "Roboto-Regular", sans-serif;
 }
 
 ul,
@@ -35,4 +38,55 @@ a {
 button:focus,
 input:focus {
   outline: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-fluid {
+  max-width: 1750px;
+  width: 100%;
+  margin: 0 auto;
+}
+.title__box-color,
+.title__box-simple {
+  text-align: center;
+  padding: 0 15px;
+  .title-name {
+    font-family: "BikhamCyrScript", arial;
+    font-weight: 100;
+    font-size: 90px;
+    line-height: 0.5;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    position: relative;
+    color: $brown;
+    text-transform: lowercase;
+    text-align: center;
+  }
+  .title-text {
+    line-height: 24px;
+    color: #818181;
+  }
+}
+
+.title__box-color.title-name {
+  padding: 0 15px 50px;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 51px;
+    height: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url(../images/title-icon.png);
+  }
+}
+.reserve__title.title__box-simple{
+
 }

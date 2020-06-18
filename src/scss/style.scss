@@ -1,13 +1,418 @@
-@import 'vars';
-@import 'fonts';
-@import 'global';
+@import "vars";
+@import "fonts";
+@import "global";
 
 //-----------------------------------------------------------------------------------------------------------
 //
 //                                                    START CODE
 //
 //-----------------------------------------------------------------------------------------------------------
+// css для затемнения главного фото
+.dimness_photo {
+  background-color: rgba(0, 0, 0, 0.341);
+  position: absolute;
+  left: -1px;
+  top: 0px;
+  width: 1751px;
+  height: 937px;
+  z-index: 235;
+}
+.header__swiper-container {
+  width: 100%;
+  height: 100%;
+}
 
+.swiper-slide {
+  height: 100vh;
+  max-width: 100%;
+  @include bgi;
+}
+.header {
+  color: #fff;
+}
+.header__banner {
+  max-width: 100%;
+  height: 100vh;
+}
+.header__inner-wrapper {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.341);
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.header__navigation {
+}
+.header__navigation-inner {
+}
+.header__navigation-item {
+  display: inline;
+}
+.header__navigation-link {
+  padding: 10px 30px;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  &:focus,
+  &:hover,
+  &:active {
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+}
+.header__logo-box {
+}
+.header__logo-name {
+  font-size: 14rem;
+  font-family: "BikhamCyrScript", arial;
+  text-transform: capitalize;
+}
+.header__logo-slogan {
+  position: relative;
+  padding-right: 120px;
+  padding-left: 120px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 75px;
+  &::before,
+  &::after {
+    top: 50%;
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: #fff;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+}
+.header__logo-social {
+}
+.header__logo-social_link {
+  color: #fff;
+  font-size: 2.5rem;
+  & + & {
+    margin-left: 15px;
+  }
+}
+.header__banner-arrow {
+  width: 103px;
+  height: 103px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+
+.header__banner-arrow_img {
+  width: 14px;
+  height: 24px;
+  transform: rotate(-45deg);
+}
+.header__swiper-container {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background-color: rgba(255, 255, 255, 0.149);
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
+}
+.header__swiper-pagination {
+}
+.swiper-pagination {
+}
+
+// restaurant start
+.restaurant__title {
+  margin-top: 120px;
+  margin-bottom: 85px;
+}
+.restaurant__items {
+  display: flex;
+  padding: 0 60px;
+  justify-content: space-between;
+  margin-bottom: 139px;
+}
+.restaurant__item-text {
+  opacity: 0;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 10px;
+  position: absolute;
+  color: #fff;
+  background-color: $lbrown;
+  text-transform: uppercase;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 28px;
+  span {
+    display: block;
+    text-align: center;
+    transform: rotate(-45deg);
+  }
+}
+.restaurant__item {
+  position: relative;
+  border: 3px solid #000;
+  border-radius: 10px;
+  max-width: 166px;
+  width: 100%;
+  height: 166px;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    .restaurant__item-text {
+      opacity: 0.9;
+    }
+  }
+}
+
+.restaurant__item-img {
+  transform: rotate(-45deg);
+}
+.restaurant__item_dishes {
+}
+.restaurant__item_coffee {
+}
+.restaurant__item_spice {
+}
+
+.restaurant__galery {
+}
+.restaurant__galery-inner {
+  display: flex;
+  justify-content: space-between;
+  min-height: 460px;
+}
+.restaurant__galery-item {
+  @include bgi;
+}
+.restaurant__galery-items {
+  margin-left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 670px;
+  width: 100%;
+}
+.galery-item-1 {
+  width: 100%;
+  min-height: 100%;
+}
+.galery-item-2 {
+  width: calc(50% - 16px);
+  min-height: calc(50% - 16px);
+}
+
+.galery-item-3 {
+  min-height: calc(50% - 16px);
+}
+
+.galery-item-4 {
+  min-height: calc(50% - 16px);
+}
+
+// restaurant end
+
+// menu start
+.menu{
+  padding: 130px 0 135px 0;
+}
+.menu__category {
+}
+.mix-container {
+}
+.menu__category-buttons {
+  padding: 0;
+  margin: 85px 0;
+  text-align: center;
+  button.menu__category-button {
+    border: 3px solid #000;
+    border-radius: 50%;
+    width: 121px;
+    height: 111px;
+      background-color: #fff;
+    }
+   button.menu__category-button +
+    button.menu__category-button{
+      margin-left: 85px;
+    }
+}
+.menu-food {
+}
+.menu-salad {
+  background-color: #fff;
+}
+.menu-coctail {
+}
+.menu-wine {
+  svg {
+    width: 63px;
+    height: 63px;
+  }
+}
+.mix {
+
+
+}
+.category-b {
+}
+.menu__item-salad {
+}
+.menu__category-items{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+.menu__item-box {
+ flex-basis: calc(50% - 250px);
+  padding: 45px 0 50px 0;
+  display:flex;
+  justify-content: space-between;
+  border-bottom: dotted #818181 1px;
+  max-width: 470px;
+  width: 100%;
+  }
+.salad-1 {
+}
+img.menu__item-img {
+  width: 169px;
+  height: 155px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 30px;
+   }
+.menu__item-inner {
+  max-width: 268px;
+  width: 100%;
+}
+.menu__item-name {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Roboto-Medium", sans-serif;
+  line-height: 22px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.menu__item-content {
+  color: #818181;
+  overflow: hidden;
+  margin-bottom: 25px;
+  text-transform: lowercase;
+}
+.menu__item-price {
+  font-family: "BikhamCyrScript",arial;
+  font-size: 30px;
+  
+  color:$brown;
+  text-decoration: none;
+  span{
+    text-decoration-line:     underline;
+    line-height: 30px;
+    color: #dadada;
+  
+  }
+}
+.menu__category-button-all{
+  width: 174px;
+  height: 54px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius:10px;
+  border:3px solid #000;
+display: block;
+  margin:0 auto;
+}
+
+// menu end
+
+// reserve start
+// {
+//   background-image: url(icon.png);
+//   background-repeat: no-repeat;
+//   background-position: right 20px center;
+// }
+.reserve__bgr{
+ max-width: 100%;
+  height: 662px;
+  @include bgi;
+  padding-top:80px;
+  padding-bottom: 65px;
+}
+
+
+
+.reserve__tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin:0 auto;
+  margin-top: 65px;
+  // text-align: center;
+}
+.reserve__tel-number {
+  color:#fff;
+  font-size: 24px;
+
+}
+a.reserve__tel-call{
+  width: 121px;
+  height: 104px;
+  background-color: $brown;
+  border-radius: 50%;
+  font-family: 'icomoon' !important; 
+  // text-align: center; 
+  // padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 55px;
+}
+.icon-phone::before
+ {
+  color:#fff;
+  font-size: 42px;
+}
+.reserve__form {
+}
+.reserve__form-name {
+}
+.reserve__form-data {
+}
+.icon-calendar {
+}
+.reserve__form-time {
+}
+.icon-clock {
+}
+.reserve__form-btn {
+}
 
 
 //-----------------------------------------------------------------------------------------------------------
@@ -16,4 +421,4 @@
 //
 //-----------------------------------------------------------------------------------------------------------
 
-@import 'media';
+@import "media";
