@@ -99,6 +99,8 @@ gulp.task("style", function () {
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
 			"node_modules/swiper/css/swiper.css",
+			"node_modules/pikaday/css/pikaday.css",
+
 		])
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
 		.pipe(cssmin()) //минифицируем полученный файл
@@ -114,6 +116,7 @@ gulp.task("script", function () {
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/swiper/js/swiper.js",
 			"node_modules/mixitup/dist/mixitup.js",
+			"node_modules/pikaday/pikaday.js",
 		])
 		.pipe(size())
 		.pipe(babel())

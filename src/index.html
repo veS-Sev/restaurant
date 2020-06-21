@@ -193,7 +193,7 @@
               <div class="menu__item-inner">
                 <div class="menu__item-name"> Салат Грeческий</div>
                 <div class="menu__item-content">Томаты, огурцы,брынза, зелень, заправка...</div>
-                <div class="menu__item-price">420руб.<span>360руб.</span></div>
+                <div class="menu__item-price"><span>420руб.</span>360руб.</div>
               </div>
             </div>
           </div>
@@ -203,7 +203,7 @@
               <div class="menu__item-inner">
                 <div class="menu__item-name">Салат Весна</div>
                 <div class="menu__item-content">Томаты, огурцы,редис, зелень, заправка...</div>
-                <div class="menu__item-price"><span></span></div>
+                <div class="menu__item-price"><span>280руб.<span>230зуб.</div>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@
               <div class="menu__item-inner">
                 <div class="menu__item-name">Салат Пикантный</div>
                 <div class="menu__item-content">Сыр, чеснок, зелень, майонез...</div>
-                <div class="menu__item-price"><span></span></div>
+                <div class="menu__item-price"><span>310руб.</span>240руб.</div>
               </div>
             </div>
           </div>
@@ -223,47 +223,48 @@
               <div class="menu__item-inner">
                 <div class="menu__item-name">Салат Лесной привал</div>
                 <div class="menu__item-content">Отварная говядина, грибы, листовой салат, майонез...</div>
-                <div class="menu__item-price"><span></span></div>
+                <div class="menu__item-price"><span>520руб.</span>480руб.</div>
               </div>
             </div>
           </div>
 
           <div class="mix category-c menu__item-coctail" data-order="1">
             <div class="menu__item-box coctail-1">
-              <img class="menu__item-img" src="#"></img>
+              <img class="menu__item-img" src="images/menu/coctail-1.jpg" alt="коктейль Гольф-клуб">
               <div class="menu__item-inner">
-                <div class="menu__item-name"></div>
-                <div class="menu__item-content"></div>
+                <div class="menu__item-name">коктейль Гольф-клуб</div>
+                <div class="menu__item-content">Джин, ликер из цветов бузины, шампанское, </div>
                 <div class="menu__item-price"><span></span></div>
               </div>
             </div>
           </div>
           <div class="mix category-c menu__item-coctail" data-order="2">
             <div class="menu__item-box coctail-2">
-              <img class="menu__item-img" src="#"></img>
+              <img class="menu__item-img" src="images/menu/coctail-2.jpg" alt="коктейль Просекко"></img>
               <div class="menu__item-inner">
-                <div class="menu__item-name"></div>
-                <div class="menu__item-content"></div>
+                <div class="menu__item-name">коктейль Prosecco</div>
+                <div class="menu__item-content"> Просекко, Гран-Марнье,
+                  лимонный сок,апельсиновый твист</div>
                 <div class="menu__item-price"><span></span></div>
               </div>
             </div>
           </div>
           <div class="mix category-c menu__item-coctail" data-order="3">
             <div class="menu__item-box coctail-3">
-              <img class="menu__item-img" src="#"></img>
+              <img class="menu__item-img" src="images/menu/coctail-3.jpg" alt="коктейль Дубовая дверь">
               <div class="menu__item-inner">
-                <div class="menu__item-name"></div>
-                <div class="menu__item-content"></div>
+                <div class="menu__item-name">коктейль Дубовая дверь</div>
+                <div class="menu__item-content">Бурбон, Апероль, шампанское, апельсиновый сироп</div>
                 <div class="menu__item-price"><span></span></div>
               </div>
             </div>
           </div>
           <div class="mix category-c menu__item-coctail" data-order="4">
             <div class="menu__item-box coctail-4">
-              <img class="menu__item-img" src="#"></img>
+              <img class="menu__item-img" src="images/menu/coctail-4.jpg" alt="коктейль Красная королева">
               <div class="menu__item-inner">
-                <div class="menu__item-name"></div>
-                <div class="menu__item-content"></div>
+                <div class="menu__item-name">коктейль Краснаяя королева</div>
+                <div class="menu__item-content">Брусничный сок, джин, ликер бузины, лимонный сок</div>
                 <div class="menu__item-price"><span></span></div>
               </div>
             </div>
@@ -330,9 +331,15 @@
             <div class="reserve__tel-number">8-800-455-45-55</div>
           </div>
           <form class="reserve__form">
-            <input class="reserve__form-name" type="text" placeholder="Имя">
-            <input class="reserve__form-data icon-calendar" type="text" id="datepicker" class="hasDatepicker">
-            <input class="reserve__form-time icon-clock" type="text">
+            <div class="reserve__form-input-wrap">
+              <input class="reserve__form-name" type="text" placeholder="Имя">
+
+              <label class="icon-calendar">
+                <input class="reserve__form-data " type="text" id="datepicker">
+              </label>
+              <label class="icon-clock">
+                <input class="reserve__form-time" type="text">
+              </label></div>
             <button class="reserve__form-btn" type="submit">зарезервировать</button>
           </form>
 
@@ -340,11 +347,51 @@
       </div>
     </div>
   </section>
+  <section class="events">
+    <div class="container">
+      <div class="enents__title title__box-simple">
+        <h2 class=" enents__title-name title-name">События</h2>
+        <div class="enents__title-text title-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+          error itaque dolorem possimus ipsum.</div>
+      </div>
+      <div class="events__inner">
+        <div class="events__item event-1">
+          <div class="events__item-cover" style="background-image:url(../images/events/event-1.jpg);"></div>
+          <div class="events__item-box">
+            <div class="events__item-data">7 октября 2019года</div>
+            <h4 class="events__item-title">Дегустация молодых вин</h4>
+            <p class="events__item-content">Труды нашего сомелье оправдались - дегустация прошла с большим успехом и в приподнятом
+              настроении.</p>
 
+          </div>
+        </div>
+        <div class="events__item event-2">
+          <div class="events__item-cover" style="background-image:url(../images/events/event-2.jpg);"></div>
+          <div class="events__item-box">
+            <div class="events__item-data">24 ноября 2019года </div>
+            <h4 class="events__item-title">Шоколадный полдник</h4>
+            <p class="events__item-content">От самых простых шоколадных лакомств до изысканных и редких деликатесов из
+              какао-бобов смогли отведать наши гости.</p>
+
+          </div>
+        </div>
+        <div class="events__item event-3">
+          <div class="events__item-cover" style="background-image:url(../images/events/event-3.jpg);"></div>
+          <div class="events__item-box">
+            <div class="events__item-data">13 марта 2020года</div>
+            <h4 class="events__item-title">Клубничный мастер-класс</h4>
+            <p class="events__item-content">Самая нежная, ароматная и популярная ягода стала главной звездой нашего
+              кулинарного шоу</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- STOP WRITE CODE -->
   @@include('components/_footer.html')
   @@include('components/_scripts.html')
+
 </body>
 
 </html>
