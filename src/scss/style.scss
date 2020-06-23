@@ -34,7 +34,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.341);
-      }
+  }
 }
 .header__inner-wrapper {
   max-width: 100%;
@@ -48,13 +48,8 @@
   justify-content: space-around;
   flex-direction: column;
 }
-.header__navigation {
-}
-.header__navigation-inner {
-}
 .header__navigation-item {
   display: inline;
-
 }
 .header__navigation-link {
   padding: 10px 30px;
@@ -68,8 +63,7 @@
     border-radius: 10px;
   }
 }
-.header__logo-box {
-}
+
 .header__logo-name {
   font-size: 14rem;
   font-family: "BikhamCyrScript", arial;
@@ -133,13 +127,13 @@
 .swiper-slide {
 }
 .swiper-pagination-bullet {
-   width: 13px;
+  width: 13px;
   height: 13px;
   background-color: rgba(255, 255, 255, 0.149);
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #fff;
-  }
+}
 .header__swiper-pagination {
 }
 .swiper-pagination {
@@ -225,7 +219,7 @@
   align-items: stretch;
   max-width: 670px;
   width: 100%;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 .galery-item-1 {
   width: 100%;
@@ -235,7 +229,7 @@
   flex-basis: calc(50% - 8px);
   min-height: calc(50% - 16px);
   width: 100%;
- }
+}
 
 .galery-item-3 {
   min-height: calc(50% - 16px);
@@ -375,7 +369,7 @@ img.menu__item-img {
   @include bgi;
   padding-top: 80px;
   padding-bottom: 65px;
-  position:relative;
+  position: relative;
   &::before {
     content: "";
     position: absolute;
@@ -385,11 +379,10 @@ img.menu__item-img {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.345);
- 
   }
-  .container{
-    position:relative;
-    z-index:10;
+  .container {
+    position: relative;
+    z-index: 10;
   }
 }
 .reserve__title {
@@ -459,7 +452,7 @@ a.reserve__tel-call {
 .icon-clock {
   position: relative;
   width: 100%;
- }
+}
 
 .icon-calendar::before,
 .icon-clock::before {
@@ -530,14 +523,14 @@ a.reserve__tel-call {
 .events__item {
   flex-basis: calc(33.333% - 32px);
 }
-.events__item:nth-child(2){
+.events__item:nth-child(2) {
   display: flex;
   flex-direction: column;
-  .events__item-cover{
-    order:1;
+  .events__item-cover {
+    order: 1;
   }
-  .events__item-box{
-    order:0;
+  .events__item-box {
+    order: 0;
   }
 }
 .event-1 {
@@ -571,12 +564,122 @@ a.reserve__tel-call {
   color: $gray;
   text-align: justify;
 }
-.event-2 {
-}
-.event-3 {
-}
 
 // events end
+
+// map start
+.map__canvas-wrap {
+  height: 491px;
+  padding-top: 65px;
+  position: relative;
+}
+.map__canvas {
+  height: 426px;
+  position: relative;
+  z-index: 1;
+}
+.map__icon {
+  width: 130px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map__icon-box {
+  background-color: $brown;
+  width: 92px;
+  height: 92px;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map__icon-title {
+  background-image: url(../images/map/marker-title.png);
+  background-repeat: no-repeat;
+  display: block;
+  color: #fff;
+  height: 32px;
+  width: 24px;
+  transform: rotate(-45deg);
+}
+.map__address {
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 372px;
+  height: 210px;
+  padding: 60px 50px 50px 50px;
+  text-align: center;
+  top: 50%;
+  left: 60%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+.map__address-title {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  line-height: 22px;
+  font-size: 20px;
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: 500;
+}
+.map__address-text {
+  color: $gray;
+  line-height: 24px;
+}
+
+// map end
+
+// footer start
+.footer__inner {
+  padding: 75px 0 80px 0;
+}
+.footer__navigation {
+
+}
+
+.footer__navigation-inner{
+  text-align: center;
+
+}
+.footer__navigation-item {
+  display:inline;
+}
+.footer__navigation-link {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  color: #000;
+  font-family: "Roboto-Medium", sans-serif;
+  line-height: 22px;
+  cursor: pointer;
+  &:focus,
+  &:hover,
+  &:active {
+    color: $brown;
+  }
+}
+.footer__social {
+}
+.footer__logo-social {
+}
+.footer__logo-social_link {
+}
+.icon-facebook-with-circle {
+}
+.icon-twitter-with-circle {
+}
+.icon-instagram-with-circle {
+}
+// footer end
 //-----------------------------------------------------------------------------------------------------------
 //
 //                                                    END CODE

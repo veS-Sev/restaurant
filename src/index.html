@@ -7,7 +7,7 @@
   <!-- WRITE CODE HERE -->
 
 
-  <section class="restaurant">
+  <section class="restaurant" id="restaurant">
     <div class="container">
       <div class="restaurant__title title__box-color">
         <h2 class=" restaurant__title-name title-name">Ресторан</h2>
@@ -17,7 +17,7 @@
       <div class="restaurant__items">
         <div class="restaurant__item">
           <img src="images/restaurant/dishes.png" alt="посуда" class="restaurant__item-img">
-          <div class="restaurant__item-text"><span>изысканная сервировка</span></div>
+          <div class="restaurant__item-text"><span>изысканная сgulpервировка</span></div>
         </div>
         <div class="restaurant__item">
           <img src="images/restaurant/coffee.png" alt="кофе" class="restaurant__item-img">
@@ -31,21 +31,21 @@
       <div class="restaurant__galery">
         <div class="restaurant__galery-inner">
           <div class="restaurant__galery-item galery-item-1"
-            style="background-image:url(../images/restaurant/restaurant-galery-1.jpg);">1</div>
+            style="background-image:url(../images/restaurant/restaurant-galery-1.jpg);"></div>
           <div class="restaurant__galery-items">
             <div class="restaurant__galery-item galery-item-2"
-              style="background-image:url(../images/restaurant/restaurant-galery-2.jpg);">2</div>
+              style="background-image:url(../images/restaurant/restaurant-galery-2.jpg);"></div>
             <div class="restaurant__galery-item galery-item-3"
-              style="background-image:url(../images/restaurant/restaurant-galery-3.jpg);">3</div>
+              style="background-image:url(../images/restaurant/restaurant-galery-3.jpg);"></div>
             <div class="restaurant__galery-item galery-item-4"
-              style="background-image:url(../images/restaurant/restaurant-galery-4.jpg);">4</div>
+              style="background-image:url(../images/restaurant/restaurant-galery-4.jpg);"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="menu">
+  <section class="menu" id="menu">
     <div class="container">
       <div class="menu__title title__box-color">
         <h2 class=" menu__title-name title-name">Меню</h2>
@@ -316,7 +316,7 @@
 
     </div>
   </section>
-  <section class="reserve">
+  <section class="reserve" id="reserve">
     <div class="container-fluid">
       <div class="reserve__bgr" style="background-image:url(../images/reserve/reserve-bgr.jpg);">
         <div class="container">
@@ -347,7 +347,7 @@
       </div>
     </div>
   </section>
-  <section class="events">
+  <section class="events" id="events">
     <div class="container">
       <div class="enents__title title__box-simple">
         <h2 class=" enents__title-name title-name">События</h2>
@@ -360,7 +360,8 @@
           <div class="events__item-box">
             <div class="events__item-data">7 октября 2019 года</div>
             <h4 class="events__item-title">Дегустация молодых вин</h4>
-            <p class="events__item-content">Труды нашего сомелье оправдались - дегустация прошла с большим успехом и в приподнятом
+            <p class="events__item-content">Труды нашего сомелье оправдались - дегустация прошла с большим успехом и в
+              приподнятом
               настроении.</p>
 
           </div>
@@ -388,16 +389,21 @@
     </div>
   </section>
 
-  <section class="map">
+  <section class="map" id="contacts">
     <div class="container-fluid">
-      <div class="map__icon-wrap">
-        <div class="map__icon-box"><span class="map__icon icon-location-pin"></span></div>
+      <div class="map__canvas-wrap">
+        <div class="map__icon">
+          <div class="map__icon-box">
+            <span class="map__icon-title"></span>
+          </div>
+        </div>
+        <div class="map__canvas" id="map"></div>
+        <address class="map__address">
+          <div class="map__address-title">Bartolomeo</div>
+          <div class="map__address-text">ул. Карла Либкнехта, 107В, Иркутск, Иркутская обл., 664047</div>
+        </address>
       </div>
-      <address class="map__locus">
-        <div class="map__locus-title">Bartolomeo</div>
-        <div class="map__locus-address">ул. Карла Либкнехта, 107В, Иркутск, Иркутская обл., 664047</div>
-      </address>
-
+    </div>
   </section>
 
   <!-- STOP WRITE CODE -->
