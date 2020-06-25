@@ -25,16 +25,16 @@
 .header__banner {
   max-width: 100%;
   height: 100vh;
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 9;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.341);
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: 9;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: rgba(0, 0, 0, 0.341);
+  // }
 }
 .header__inner-wrapper {
   max-width: 100%;
@@ -50,12 +50,15 @@
 }
 .header__navigation-item {
   display: inline;
+  cursor: pointer;
 }
 .header__navigation-link {
-  padding: 10px 30px;
+  padding: 0px 30px;
   color: #fff;
   border: 1px solid transparent;
-  cursor: pointer;
+  display: inline-block;
+  transition-duration: 0.5s;
+  line-height: 38px;
   &:focus,
   &:hover,
   &:active {
@@ -68,6 +71,8 @@
   font-size: 14rem;
   font-family: "BikhamCyrScript", arial;
   text-transform: capitalize;
+  display: block;
+  color: #fff;
 }
 .header__logo-slogan {
   position: relative;
@@ -76,6 +81,7 @@
   font-size: 12px;
   display: inline-block;
   margin-bottom: 75px;
+  letter-spacing: 1.5px;
   &::before,
   &::after {
     top: 50%;
@@ -125,6 +131,9 @@
 .swiper-wrapper {
 }
 .swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .swiper-pagination-bullet {
   width: 13px;
@@ -135,6 +144,8 @@
   background: #fff;
 }
 .header__swiper-pagination {
+  position:absolute;
+  z-index: 11;
 }
 .swiper-pagination {
 }
@@ -184,23 +195,14 @@
   justify-content: center;
   &:hover,
   &:focus {
+    border: 3px solid $brown;
     .restaurant__item-text {
       opacity: 0.9;
     }
   }
 }
-
 .restaurant__item-img {
   transform: rotate(-45deg);
-}
-.restaurant__item_dishes {
-}
-.restaurant__item_coffee {
-}
-.restaurant__item_spice {
-}
-
-.restaurant__galery {
 }
 .restaurant__galery-inner {
   display: flex;
@@ -209,8 +211,6 @@
 }
 .restaurant__galery-item {
   @include bgi;
-  // max-width: 100%;
-  // width: 100%;
 }
 .restaurant__galery-items {
   margin-left: 16px;
@@ -223,7 +223,6 @@
 }
 .galery-item-1 {
   width: 100%;
-  // min-height: 100%;
 }
 .galery-item-2 {
   flex-basis: calc(50% - 8px);
@@ -264,10 +263,18 @@
     width: 121px;
     height: 111px;
     background-color: #fff;
+    &:hover {
+      border: 3px solid $brown;
+      background-color: $brown;
+      transition: all 0.3s;
+      g {
+        fill: #fff;
+      }
+    }
   }
-  button.menu__category-button + button.menu__category-button {
-    margin-left: 85px;
-  }
+}
+button.menu__category-button + button.menu__category-button {
+  margin-left: 85px;
 }
 .menu-food {
 }
@@ -276,12 +283,7 @@
 }
 .menu-coctail {
 }
-.menu-wine {
-  svg {
-    width: 63px;
-    height: 63px;
-  }
-}
+
 .mix {
 }
 .category-b {
@@ -302,8 +304,7 @@
   max-width: 470px;
   width: 100%;
 }
-.salad-1 {
-}
+
 img.menu__item-img {
   width: 169px;
   height: 155px;
@@ -331,13 +332,13 @@ img.menu__item-img {
   text-transform: lowercase;
 }
 .menu__item-price {
-  font-family: "BikhamCyrScript", arial;
-  font-size: 30px;
-
+  // font-family: "BikhamCyrScript", arial;
+  font-family: "Roboto-LightItalic", sans-serif;
+  font-size:20px;
   color: $brown;
   text-decoration: none;
   span {
-    text-decoration-line: underline;
+    text-decoration-line: line-through;
     line-height: 30px;
     color: #dadada;
   }
@@ -546,8 +547,7 @@ a.reserve__tel-call {
   padding: 65px 20px 20px 20px;
   overflow: hidden;
   text-align: center;
-  max-height: 270px;
-  height: 100%;
+  height: 270px;
 }
 .events__item-data {
   color: $gray;
@@ -616,7 +616,7 @@ a.reserve__tel-call {
   z-index: 10;
   background-color: #fff;
   border-radius: 10px;
-  max-width: 372px;
+  max-width: 371px;
   height: 210px;
   padding: 60px 50px 50px 50px;
   text-align: center;
@@ -644,15 +644,14 @@ a.reserve__tel-call {
   padding: 75px 0 80px 0;
 }
 .footer__navigation {
-
+  margin-bottom: 40px;
 }
 
-.footer__navigation-inner{
+.footer__navigation-inner {
   text-align: center;
-
 }
 .footer__navigation-item {
-  display:inline;
+  display: inline;
 }
 .footer__navigation-link {
   text-transform: uppercase;
@@ -667,18 +666,30 @@ a.reserve__tel-call {
     color: $brown;
   }
 }
-.footer__social {
-}
+
 .footer__logo-social {
+  text-align: center;
 }
 .footer__logo-social_link {
+  color: #999;
+  font-size: 34px;
 }
-.icon-facebook-with-circle {
-}
-.icon-twitter-with-circle {
+.icon-twitter-with-circle,
+.icon-instagram-with-circle {
+  margin-left: 18px;
 }
 .icon-instagram-with-circle {
 }
+.twitter_icon {
+  background-image: url("twitter icon.png");
+  position: absolute;
+  left: 859px;
+  top: 5787px;
+  width: 32px;
+  height: 32px;
+  z-index: 7;
+}
+
 // footer end
 //-----------------------------------------------------------------------------------------------------------
 //
