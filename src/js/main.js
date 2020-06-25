@@ -5,7 +5,7 @@ $(function () {
     centeredSlides: true,
     effect: 'fade',
     autoplay: {
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -22,7 +22,14 @@ $(function () {
     }
   });
 
-
+  var $datepicker = $('#datepicker').pikaday({
+    firstDay: 1,
+    minDate: new Date('2000-01-01'),
+    maxDate: new Date('2020-12-31'),
+    yearRange: [2000,2020]
+});
+// chain a few methods for the first datepicker, jQuery style!
+$datepicker.pikaday('show').pikaday('nextMonth');
 
 });
 
@@ -65,12 +72,4 @@ marker.addTo(map);
 // https://openstreetmap.ru/#mmap=17/52.27953/104.311
 
 
-//   var $datepicker = $('#datepicker').pikaday({
-//     firstDay: 1,
-//     minDate: new Date('2000-01-01'),
-//     maxDate: new Date('2020-12-31'),
-//     yearRange: [2000,2020]
-// });
-// // chain a few methods for the first datepicker, jQuery style!
-// $datepicker.pikaday('show').pikaday('nextMonth');
 
