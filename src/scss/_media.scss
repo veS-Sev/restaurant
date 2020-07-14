@@ -1,0 +1,141 @@
+@media (max-width: 1200px) {
+  .header__logo-name {
+    font-size: 10rem;
+  }
+  .header__banner-arrow {
+    width: 73px;
+    height: 73px;
+  }
+  .header__banner-arrow-img {
+    width: 10px;
+    height: 18px;
+  }
+  .header__banner-arrow {
+    border: 2px solid #fff;
+  }
+}
+
+@media (max-width: 800px) {
+  .header__logo-social-link::before {
+    font-size: 1.5rem;
+  }
+  .header__navigation-link {
+    font-size: 12px;
+    padding: 0px 15px;
+  }
+  .header__logo-slogan {
+    font-size: 10px;
+    margin-bottom: 45px;
+  }
+  .header__banner-arrow {
+    width: 63px;
+    height: 63px;
+  }
+}
+@media (max-width: 700px) {
+  .swiper-pagination-bullet,
+  .header__swiper-pagination {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__logo-name {
+    font-size: 7rem;
+  }
+  .header__logo-slogan {
+    padding-right: 70px;
+    padding-left: 70px;
+    &::before,
+    &::after {
+      width: 50px;
+    }
+  }
+  .header__banner-arrow {
+    border: 1px solid #fff;
+  }
+}
+@media (max-width: 550px) {
+  .header__inner-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .menu__btn {
+    display: inline-block;
+    margin-left: 35px;
+    position: absolute;
+    z-index: 25;
+    top: 25px;
+  }
+
+  .menu__btn-line {
+    height: 1px;
+    width: 45px;
+    background-color: #fff;
+    &:nth-child(even) {
+      margin: 6px 0;
+      height: 3px;
+    }
+  }
+  .header__navigation-inner {
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 125px, rgba(#fff, 0.9) 0px);
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+  }
+  .header__navigation-item {
+    display: block;
+    &:first-child {
+      margin-top: 25px;
+    }
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+  .header__navigation-link {
+    color: $gray;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 0 5px 0;
+    &:focus,
+    &:hover,
+    &:active {
+      border: none;
+      border-radius: 0;
+      span {
+        display: block;
+        max-width: 50%;
+        margin: 0 auto;
+        border-bottom: $gray 1px solid;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header__logo-name {
+    font-size: 6rem;
+  }
+  .header__logo-slogan {
+    font-size: 8px;
+  }
+  .header__banner-arrow {
+    width: 53px;
+    height: 53px;
+  }
+  .header__banner-arrow-img {
+    width: 8px;
+    height: 14px;
+}
+}
+
+@media (min-width: 550px) {
+  .header__navigation-inner {
+    display: block;
+  }
+}

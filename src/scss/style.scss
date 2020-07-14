@@ -27,18 +27,25 @@
   height: 100vh;
 }
 .header__inner-wrapper {
-   width: fit-content;
+  width: fit-content;
   height: 100vh;
   position: absolute;
-  left:0;
-  right:0;
-  margin:0 auto;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 10;
   text-align: center;
   text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+.menu__btn{
+  display:none;
+}
+.header__navigation-inner {
+  position: relative;
+  z-index: 15;
 }
 .header__navigation-item {
   display: inline;
@@ -89,11 +96,19 @@
     right: 0;
   }
 }
-.header__logo-social_link {
+.header__logo-social-link {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 0px;
+  padding-bottom: 5px;
+  transition: 3000;
   & + & {
     margin-left: 15px;
+  }
+  &::before {
+    font-size: 2.5rem;
+  }
+  &:hover {
+    border-bottom: 1px solid rgba(#fff, 0.75);
   }
 }
 .header__banner-arrow {
@@ -107,10 +122,10 @@
   border-radius: 10px;
   transform: rotate(45deg);
 }
-.header__banner-arrow-wrap{
+.header__banner-arrow-wrap {
   transform: rotate(-45deg);
 }
-.header__banner-arrow_img {
+.header__banner-arrow-img {
   width: 14px;
   height: 24px;
   animation: reverse;
@@ -122,11 +137,11 @@
 }
 @keyframes arrowDown {
   0% {
-       transform: translate3d(0, 75%, 0);
+    transform: translate3d(0, 75%, 0);
   }
   to {
     transform: translateZ(0);
-   }
+  }
 }
 .header__swiper-container {
   position: relative;
@@ -140,7 +155,7 @@
 .swiper-pagination-bullet {
   width: 13px;
   height: 13px;
-  background-color: rgba(255, 255, 255, 0.45); 
+  background-color: rgba(255, 255, 255, 0.45);
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #fff;
@@ -266,13 +281,20 @@
     }
   }
 }
+// #MixItUp665C37 > div.menu__category-buttons > button.menu__category-button.menu-food
+
+button.menu__category-button.mixitup-control-active {
+  border: 3px solid $brown;
+  background-color: $brown;
+  transition: all 0.3s;
+  g {
+    fill: #fff;
+  }
+}
 button.menu__category-button + button.menu__category-button {
   margin-left: 85px;
 }
 
-// .menu-salad {
-//   background-color: #fff;
-// }
 .menu__category-items {
   display: flex;
   flex-wrap: wrap;
@@ -478,6 +500,7 @@ a.reserve__tel-call {
   border: 1px solid #ccc;
   border-bottom-color: #bbb;
   font-family: "Roboto-Regular", sans-serif;
+  border-radius: 10px;
 }
 
 .pika-button:hover,
@@ -487,7 +510,11 @@ a.reserve__tel-call {
   box-shadow: none;
   border-radius: 3px;
 }
-
+.has-event .pika-button,
+.is-selected .pika-button {
+  background-color: $gray;
+  box-shadow: inset 0 1px 3px $gray;
+}
 // pikaday end
 
 //  reserve end
@@ -651,22 +678,20 @@ a.reserve__tel-call {
   text-align: center;
 }
 .footer__logo-social_link {
+  padding-bottom: 4px;
   color: #999;
-  font-size: 34px;
+  font-size: 0;
+  transition: 3000;
+  &::before {
+    font-size: 34px;
+  }
+  &:hover {
+    border-bottom: 2px solid rgba($gray, 0.75);
+  }
 }
 .icon-twitter-with-circle,
 .icon-instagram-with-circle {
   margin-left: 18px;
-}
-
-.twitter_icon {
-  background-image: url("twitter icon.png");
-  position: absolute;
-  left: 859px;
-  top: 5787px;
-  width: 32px;
-  height: 32px;
-  z-index: 7;
 }
 
 // footer end
