@@ -40,8 +40,8 @@
   justify-content: space-around;
   flex-direction: column;
 }
-.menu__btn{
-  display:none;
+.menu__btn {
+  display: none;
 }
 .header__navigation-inner {
   position: relative;
@@ -264,7 +264,8 @@
 .menu__category-buttons {
   padding: 0;
   margin: 85px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   button.menu__category-button {
     border: 3px solid #000;
     border-radius: 50%;
@@ -281,7 +282,6 @@
     }
   }
 }
-// #MixItUp665C37 > div.menu__category-buttons > button.menu__category-button.menu-food
 
 button.menu__category-button.mixitup-control-active {
   border: 3px solid $brown;
@@ -301,7 +301,6 @@ button.menu__category-button + button.menu__category-button {
   justify-content: space-between;
 }
 .menu__item-box {
-  flex-basis: calc(50% - 250px);
   padding: 45px 0 50px 0;
   display: flex;
   justify-content: space-between;
@@ -329,12 +328,15 @@ img.menu__item-img {
   margin-top: 25px;
   margin-bottom: 15px;
   text-transform: uppercase;
+  overflow-y: hidden;
+  max-height: 44px;
 }
 .menu__item-content {
   color: $gray;
-  overflow: hidden;
   margin-bottom: 25px;
   text-transform: lowercase;
+  overflow-y: hidden;
+  max-height: 32px;
 }
 .menu__item-price {
   // font-family: "BikhamCyrScript", arial;

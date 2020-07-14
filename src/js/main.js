@@ -26,23 +26,27 @@ $(function () {
 
   // var picker = new Pikaday({ field: document.getElementById('datepicker') });
 
- 
+
   var field = document.getElementById('datepicker');
   var picker = new Pikaday({
-      onSelect: function(date) {
-          field.value = picker.toString();
+    onSelect: function (date) {
+      field.value = picker.toString();
 
-      }
+    }
   });
   field.parentNode.insertBefore(picker.el, field.nextSibling);
 
 
-    // var picker = new Pikaday({ field: $('#datepicker')[0] });
-     $('.menu__btn').on('click', function () {
-        $('.header__navigation-inner').slideToggle();
-   
-      });
+  // var picker = new Pikaday({ field: $('#datepicker')[0] });
+  $('.menu__btn').on('click', function () {
+    $('.header__navigation-inner').slideToggle(1000);
+    $('.menu__btn-line').toggleClass('inert-menu');
   });
+});
+
+if ( $(window).width() > 899 ) {
+  $('.header__banner-arrow').attr("href", "#restaurant");}
+
 
 
 let mapOptions = {
@@ -82,7 +86,3 @@ let marker = L.marker([52.27959, 104.31101], markerOptions);
 // Adding marker to the map
 marker.addTo(map);
 // https://openstreetmap.ru/#mmap=17/52.27953/104.311
-
- 
- 
-
