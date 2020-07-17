@@ -13,25 +13,50 @@
   .header__banner-arrow {
     border: 2px solid #fff;
   }
-  .reserve__form-input-wrap{
+  .reserve__bgr {
+    padding-top: 40px;
+  }
+  .reserve__form-input-wrap {
+    justify-content: center;
+  }
+  // .reserve__form-name {
+  //   width: 70%;
+  // }
+  // .reserve__form-data,
+  // .reserve__form-time {
+  //   width: 100%;
+  // }
+  // .icon-calendar,
+  // .icon-clock {
+  //   width: 70%;
+  // }
+}
+@media (max-width: 1130px) {
+  .reserve__form-input-wrap {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .reserve__form-data, .reserve__form-name, .reserve__form-time {
-    max-width: 100%;
+  .reserve__form-name,
+  .icon-calendar,
+  .icon-clock {
+    margin-top: 10px;
   }
-
+  .icon-calendar {
+    margin-left: 10px;
+  }
 }
 @media (max-width: 1000px) {
   button.menu__category-button + button.menu__category-button {
-    margin-left: 45px;
+    margin-left: 10px;
   }
-  .menu__item-food{
-    width:calc(50% - 30px);
+  .menu__item-food {
+    width: calc(50% - 30px);
+  }
+  .reserve__tel {
+    margin: 35px 0;
   }
 }
 
-// эксперимент
 @media (max-width: 900px) {
   .header__inner-wrapper {
     max-width: 100%;
@@ -98,7 +123,7 @@
       }
     }
   }
- 
+
   .menu {
     padding: 30px 0 30px;
   }
@@ -118,8 +143,37 @@
   .restaurant {
     display: none;
   }
-  .menu__item-food{
-    width:100%;
+
+  .menu__category-buttons {
+    margin: 35px 0 0 0;
+  }
+  .menu__item-food,
+  .menu__item-salad,
+  .menu__item-coctail,
+  .menu__item-wine {
+    width: 100%;
+  }
+  .menu__item-box {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  // .icon-calendar{
+
+  //   margin-top:10px;
+  // margin-left: 10px;
+  // }
+}
+@media (max-width: 760px) {
+  .icon-calendar {
+    margin-left: 0px;
+  }
+  .reserve__tel-number {
+    font-size: 20px;
+  }
+  a.reserve__tel-call {
+    width: 101px;
+    height: 84px;
   }
 }
 @media (max-width: 700px) {
@@ -127,13 +181,7 @@
   .header__swiper-pagination {
     display: none;
   }
-  .menu__category-buttons {
-      margin: 35px 0;
-  }
-  button.menu__category-button + button.menu__category-button {
-    margin-left: 25px;
-  }
-  .menu__category-items{
+  .menu__category-items {
     justify-content: center;
   }
 }
@@ -153,83 +201,31 @@
   .header__banner-arrow {
     border: 1px solid #fff;
   }
-  .menu__category-buttons{
-    flex-wrap:wrap;
+  .menu__category-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  // .menu__category-button{
-  //   width:calc(50% - 25px);
+
+  // .menu__category-buttons:nth-child(3){
+  //   margin-left: 110px;
   // }
 }
-// @media (max-width: 550px) {
-//   .header__inner-wrapper {
-//     max-width: 100%;
-//     width: 100%;
-//   }
-
-//   .menu__btn {
-//     display: inline-block;
-//     margin-left: 35px;
-//     position: absolute;
-//     z-index: 25;
-//     top: 25px;
-//   }
-
-//   .menu__btn-line {
-//     height: 1px;
-//     width: 45px;
-//     background-color: $gray;
-//     &.inert-menu {
-//       background-color: #fff;
-//     }
-//     &:nth-child(even) {
-//       margin: 6px 0;
-//       height: 3px;
-//     }
-//   }
-//   .header__navigation-inner {
-//     background-color: rgba(#fff, 0.9);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     z-index: 20;
-//   }
-//   .header__navigation-item {
-//     display: block;
-//     &:first-child {
-//       margin-top: 25px;
-//     }
-//     &:nth-child(2) {
-//       display: none;
-//     }
-//     &:last-child {
-//       margin-bottom: 25px;
-//     }
-//   }
-//   .header__navigation-link {
-//     color: $gray;
-//     display: block;
-//     max-width: 100%;
-//     width: 100%;
-//     padding: 0 0 5px 0;
-//     &:focus,
-//     &:hover,
-//     &:active {
-//       border: none;
-//       border-radius: 0;
-//       span {
-//         display: block;
-//         max-width: 50%;
-//         margin: 0 auto;
-//         border-bottom: $gray 1px solid;
-//       }
-//     }
-//   }
- 
-//   .menu {
-//     padding: 30px 0 30px;
-//   }
-// }
+@media (max-width: 550px) {
+  .menu__category-buttons {
+    max-height: 250px;
+    flex-direction: column;
+    align-items: center;
+  }
+  button.menu__category-button + button.menu__category-button {
+    margin-left: 0px;
+  }
+  button.menu__category-button {
+    margin-bottom: 10px;
+  }
+  a.reserve__tel-call {
+    margin: 0 30px;
+  }
+}
 
 @media (max-width: 500px) {
   .header__navigation-link {
@@ -255,8 +251,27 @@
     width: 8px;
     height: 14px;
   }
+  .reserve__title-name.title-name {
+    font-size: 60px;
+  }
+  .title__box-simple.title-text {
+    line-height: 18px;
+  }
+  .reserve__tel-number-second {
+    display: none;
+  }
+  .reserve__tel {
+    justify-content: space-around;
+  }
+  a.reserve__tel-call {
+    width: 84px;
+    height: 84px;
+    margin-right: 0;
+  }
+  .icon-phone::before {
+    font-size: 32px;
+  }
 }
-
 @media (max-width: 400px) {
   .header__logo-name {
     font-size: 5rem;
@@ -268,3 +283,8 @@
     display: block;
   }
 }
+// @media (min-width: 340px) {
+//   .reserve__tel {
+//     justify-content: space-around;
+//   }
+// }

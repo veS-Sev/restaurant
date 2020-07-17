@@ -19,7 +19,7 @@ $(function () {
 
   var mixer = mixitup('.mix-container', {
     load: {
-      filter: '.category-a',
+      filter: '.category-c',
       sort: 'myorder:desc'
     }
   });
@@ -27,14 +27,14 @@ $(function () {
   // var picker = new Pikaday({ field: document.getElementById('datepicker') });
 
 
-  var field = document.getElementById('datepicker');
-  var picker = new Pikaday({
-    onSelect: function (date) {
-      field.value = picker.toString();
+  // var field = document.getElementById('datepicker');
+  // var picker = new Pikaday({
+  //   onSelect: function (date) {
+  //     field.value = picker.toString();
 
-    }
-  });
-  field.parentNode.insertBefore(picker.el, field.nextSibling);
+  //   }
+  // });
+  // field.parentNode.insertBefore(picker.el, field.nextSibling);
 
 
   // var picker = new Pikaday({ field: $('#datepicker')[0] });

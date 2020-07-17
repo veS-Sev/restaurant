@@ -440,6 +440,7 @@ a.reserve__tel-call {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .reserve__form-name,
 .reserve__form-data,
