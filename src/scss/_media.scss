@@ -49,8 +49,17 @@
   button.menu__category-button + button.menu__category-button {
     margin-left: 10px;
   }
-  .menu__item-food {
+  .menu__item-food,
+  .menu__item-salad,
+  .menu__item-coctail,
+  .menu__item-wine {
     width: calc(50% - 30px);
+  }
+  .menu__item-name {
+    height: 44px;
+  }
+  .menu__item-content {
+    height: 32px;
   }
   .reserve__tel {
     margin: 35px 0;
@@ -123,9 +132,23 @@
       }
     }
   }
-
   .menu {
     padding: 30px 0 30px;
+  }
+  .events {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .events__item-box {
+    padding-top: 25px;
+  }
+  .events__item {
+    flex-basis: 33.333%;
+  }
+  .events__item-title {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 800px) {
@@ -143,9 +166,34 @@
   .restaurant {
     display: none;
   }
-
+  .menu__category-buttons button.menu__category-button {
+    width: 81px;
+    height: 71px;
+  }
+  .menu-food {
+    svg {
+      width: 33px;
+      height: 43px;
+    }
+  }
+  .menu-salad,
+  .menu-coctail {
+    svg {
+      width: 33px;
+      height: 43px;
+    }
+  }
+  .menu-wine {
+    svg {
+      width: 43px;
+      height: 53px;
+    }
+  }
   .menu__category-buttons {
     margin: 35px 0 0 0;
+    .menu__category-button {
+      border: 1px solid #000;
+    }
   }
   .menu__item-food,
   .menu__item-salad,
@@ -157,14 +205,23 @@
     max-width: 100%;
     justify-content: center;
   }
-
+  .menu__item-name {
+    max-height: 44px;
+    height: 100%;
+  }
+  .menu__item-content {
+    line-height: 14px;
+    font-size: 12px;
+    max-height: 42px;
+    height: 100%;
+  }
   // .icon-calendar{
 
   //   margin-top:10px;
   // margin-left: 10px;
   // }
 }
-@media (max-width: 760px) {
+@media (max-width: 776px) {
   .icon-calendar {
     margin-left: 0px;
   }
@@ -181,8 +238,26 @@
   .header__swiper-pagination {
     display: none;
   }
+  .title__box-color .title-name,
+  .title__box-simple .title-name {
+    font-size: 70px;
+  }
+  .title__box-color .title-text,
+  .title__box-simple .title-text {
+    font-size: 12px;
+  }
+  .menu,
+  .reserve,
+  .events {
+    .container {
+      padding: 0px;
+    }
+  }
   .menu__category-items {
     justify-content: center;
+  }
+  .events__inner {
+    margin-top: 55px;
   }
 }
 
@@ -212,7 +287,7 @@
 }
 @media (max-width: 550px) {
   .menu__category-buttons {
-    max-height: 250px;
+    max-height: 200px;
     flex-direction: column;
     align-items: center;
   }
@@ -251,6 +326,19 @@
     width: 8px;
     height: 14px;
   }
+
+  img.menu__item-img {
+    width: 139px;
+    height: 125px;
+    margin-right: 15px;
+  }
+  .menu__item-name {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .menu__item-content {
+    margin-bottom: 10px;
+  }
   .reserve__title-name.title-name {
     font-size: 60px;
   }
@@ -275,6 +363,15 @@
 @media (max-width: 400px) {
   .header__logo-name {
     font-size: 5rem;
+  }
+  .menu__item-name {
+    font-size: 14px;
+  }
+  .menu__item-content {
+    font-size: 12px;
+  }
+  .menu__item-price {
+    font-size: 18px;
   }
 }
 
