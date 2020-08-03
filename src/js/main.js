@@ -41,8 +41,9 @@ $(function () {
   $('.menu__btn').on('click', function () {
     $('.header__navigation-inner').slideToggle(1000);
     $('.menu__btn-line').toggleClass('inert-menu');
-  });
+     });
 });
+
 
 if ( $(window).width() > 899 ) {
   $('.header__banner-arrow').attr("href", "#restaurant");}

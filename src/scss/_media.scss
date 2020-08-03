@@ -83,15 +83,16 @@
   .menu__btn-line {
     height: 1px;
     width: 45px;
-    background-color: $gray;
+    background-color: #fff;
     &.inert-menu {
-      background-color: #fff;
+      background-color: $gray;
     }
     &:nth-child(even) {
       margin: 6px 0;
       height: 3px;
     }
   }
+
   .header__navigation-inner {
     background-color: rgba(#fff, 0.9);
     position: absolute;
@@ -99,6 +100,7 @@
     left: 0;
     right: 0;
     z-index: 20;
+    display: none;
   }
   .header__navigation-item {
     display: block;
@@ -258,6 +260,21 @@
   }
   .events__inner {
     margin-top: 55px;
+    display: block;
+  }
+  .events__item-box {
+    height: auto;
+    max-height: 270px;
+  }
+
+  .events__item-box {
+    padding-bottom: 45px;
+  }
+  .events__item:nth-child(2) .events__item-box {
+    order: 1;
+  }
+  .events__item:nth-child(2) .events__item-cover {
+    order: 0;
   }
 }
 
@@ -358,6 +375,9 @@
   }
   .icon-phone::before {
     font-size: 32px;
+  }
+  .events__item-title {
+    font-size: 16px;
   }
 }
 @media (max-width: 400px) {
