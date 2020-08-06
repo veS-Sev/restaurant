@@ -14,9 +14,6 @@ $(function () {
     },
 
   });
-
-
-
   var mixer = mixitup('.mix-container', {
     load: {
       filter: '.category-c',
@@ -24,29 +21,38 @@ $(function () {
     }
   });
 
+
   // var picker = new Pikaday({ field: document.getElementById('datepicker') });
 
 
-  // var field = document.getElementById('datepicker');
-  // var picker = new Pikaday({
-  //   onSelect: function (date) {
-  //     field.value = picker.toString();
+  var field = document.getElementById('datepicker');
 
-  //   }
-  // });
-  // field.parentNode.insertBefore(picker.el, field.nextSibling);
+  field.addEventListener('click', function () {
+       var picker = new Pikaday({
+        format: 'DD MM YYYY',
+      onSelect: function (date) {
+        field.value = picker.toString();
+
+      }
+    });
+    field.parentNode.insertBefore(picker.el, field.nextSibling);
+
+  });
 
 
   // var picker = new Pikaday({ field: $('#datepicker')[0] });
+
+
   $('.menu__btn').on('click', function () {
     $('.header__navigation-inner').slideToggle(1000);
     $('.menu__btn-line').toggleClass('inert-menu');
-     });
+  });
 });
 
 
-if ( $(window).width() > 899 ) {
-  $('.header__banner-arrow').attr("href", "#restaurant");}
+if ($(window).width() > 899) {
+  $('.header__banner-arrow').attr("href", "#restaurant");
+}
 
 
 
