@@ -23,20 +23,37 @@ $(function () {
 
 
   // var picker = new Pikaday({ field: document.getElementById('datepicker') });
-
+  
+ 
 
   var field = document.getElementById('datepicker');
 
   field.addEventListener('click', function () {
-       var picker = new Pikaday({
-        format: 'DD MM YYYY',
+    var picker = new Pikaday({
+      format: 'DD MMM YYYY',
+      firstDay: 1,
+      // minDate: null,
+      // yearSuffix: 'года',
+      // showDaysInNextAndPreviousMonths: true,
+      i18n: {
+        previousMonth : 'Previous Month',
+        nextMonth     : 'Next Month',
+        months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+        weekdays      : ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
+        weekdaysShort : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб']
+    },
       onSelect: function (date) {
+        // field.value = picker.toString();
+        // let dateClick = this.getMoment().format('D MMM YYYY');
+        // console.log(this.getMoment().format('Do MMMM YYYY'));
         field.value = picker.toString();
-
+       
       }
     });
+    // picker.toString('DD-MM-YYYY');
     field.parentNode.insertBefore(picker.el, field.nextSibling);
-
+    // toString(date, format = 'YYYY-MM-DD')
+    
   });
 
 

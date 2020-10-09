@@ -119,6 +119,7 @@ gulp.task("script", function () {
 			"node_modules/mixitup/dist/mixitup.js",
 			"node_modules/pikaday/pikaday.js",
 			"node_modules/leaflet/dist/leaflet.js",
+			
 	
 		])
 		.pipe(size())
