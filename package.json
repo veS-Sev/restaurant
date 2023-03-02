@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.1",
     "@babel/preset-env": "^7.10.1",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.28.1",
     "del": "^5.1.0",
     "fontforge": "^0.0.4",
     "global": "^4.4.0",
